@@ -1,0 +1,185 @@
+<html>
+
+<head>
+    <script src="jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <base target="_blank">
+</head>
+<title>這可是彰友的新生包呢!</title>
+
+<body class="body">
+    <div class="float-up" id="float-up">
+        <h1 class="float-up" id="title"></h1>
+        <p class="float-up" id="text"></p>
+    </div>
+    <div id="show-work-area">
+        <div class="course-time-clock">
+            <h1>及時選課時辰</h1>
+            <h3 id="time"></h3>
+            <div>
+                <h2 id="interval"></h2>
+                <p id="intro"></p>
+                <p id="note" style="text-align: left;"></p>
+            </div>
+            <br><br>
+        </div>
+    </div>
+    <div class="title">~~~~~???!!!!</div>
+    <button class="float-btn" id="return" style="top: 85%;">移到<br>最上面</button>
+    <button class="float-btn" id="show-work" style="top: 20%;">-及時-<br>選課時辰</button>
+    <div class="navbar">
+        <button id="ind1" value="preface">會長的話</button>
+        <button id="ind2" value="nckuMap">成大周遭</button>
+        <button id="ind3" value="dorm">宿舍介紹</button>
+        <button id="ind4" value="course">關於選課</button>
+        <button id="ind5" value="course-time">選課時間</button>
+    </div>
+    <div class="content" id="preface">
+        <h1>初展，當翅膀染上南方的煦陽</h1>
+        <h1>(關於彰友會與會長的話)</h1>
+        <h2>施媽媽的語重心長</h2>
+        <img src="./image/1.png" style="float: right; margin-left: 2%" height="250px">
+        <p>
+            &emsp; &emsp;嗨大家～～～首先恭喜你們終於要出發上大學嘍！歡迎大家來成大和我們一起play，09的學長姐們真的都滿心期待要和你們見面&gt;&lt;<br><br>
+            大家應該很好奇到底什麼是彰友會呢！彰友會不單純只是一個社團組織或是一個提供和高中同學見面機會的平台。對於離開彰化獨自到台南奮鬥的你們來說，這裡像是一個家—就和爸爸媽媽一樣，友會裡的家爸家媽就是你們的依靠，有事真的都可以讓我們幫你們分擔解憂。<br><br>
+            &emsp; &emsp;那為什麼要參加彰友會呢？彰友會有很多活動可以讓大家一起玩！其實一年前我也是個害羞的少女&gt;&lt;（不敢和男生講話的那種哈哈哈）相信大家可以在彰友會的活動中認識不管是一起吃飯一起玩的朋友，也能找到願意陪你聊心事、一起成長的好夥伴。<br><br>
+            接下來是施媽媽囉唆時間XD<br><br>
+            &emsp; &emsp;當你們收到這本新生手冊的時候高中最後的暑假大概也只剩一半，而到底上大學之前要做些什麼呢！規劃未來的部分相信大家都很擅長，學習語言、多涉略不同領域都是很簡單能起步的方向。有空的話建議大家好好練個機車，考張駕照。在台南會騎車的話，生活圈會變大很多，更何況還要載妹子呢xd（但如果還沒很會騎上路的話真的要小心，台南的車很兇的）最後，如果可以的話，好好把握和家人還有高中生活圈的相處時光吧！上大學後世界會變得更大，但有時候這些珍貴的快樂回憶絕對會成為日後遇到挫折時很堅固的支柱。 <br><br>
+            &emsp; &emsp;大學的世界很大，有想要嘗試的事情、想要努力的夢想都可以趁現在勇敢去做， 而我們希望你們的記憶裡，能夠有成大彰友會和大家一起青春過的印記。
+
+        </p>
+        <br><br><br>
+        <h2>柯爸爸<del>的幹話</del></h2>
+        <img src="./image/2.png" style="float: left; margin-right: 50px;" height="250px">
+        <p>
+            &emsp; &emsp;走進時光的長廊，回想起大一時，彰友會的學長姐們映入我青澀的目光中，並且成為了我至今都很好的朋友。在大一的一路上，我跌跌撞撞遇到了很多挫折。難過、失望的時候，總有那麼一群人會一直都在我的身邊從不離去，那就是這群友會的學長姐和同屆的朋友們。或許他們不會是我這輩子永遠的摯友，但絕對是我大學生涯不可或缺的重要回憶。<br><br>
+             &emsp; &emsp;彰友會真的是一個溫暖的大家庭，我在這裡認識了很多很好的夥伴。這裡是我大學生涯裡很棒的依靠，歡迎大家加入溫暖的彰友大家庭，這會是一個很棒的地方!!
+        </p>
+
+    </div>
+    <div class="content" id="nckuMap">
+        <hr>
+        <div id="map-space">
+            <img id="map" src="./image/nckuMap/nckuMap0.jpg">
+        </div>
+        <div id="content-space">
+            <div class="mapBtn">
+                <button id="left_btn" value="-1">上一個: 東寧路</button>
+                <button id="right_btn" value="1">下一個: 勝利路</button>
+            </div>
+            <div id="content-intro" value="0" style="margin: 5% 10%;">
+                <h1>大學路</h1>
+                <p>
+                    後火車站出來一直延續到到林森路便是成大人最熟悉的一條路－大學路了，它會經過光復、成功、勝利、自強四大校區，是你每天必經之路喔。<br><br> 從火車站出來後，映入眼簾的就是香格里拉大飯店和大遠百，面向的路是大學路，向前走便是光復校區，光復校區大門口（成大生習慣稱「光口」）對面有一家小七，旁邊就是育樂街口，是覓食的好地方，附近也有一些飲料店、影印店等，非常的方便。
+                    <br/><br/> 再直走是與勝利路的交叉路口，還有寫著「窮理致知」校訓的成大凱旋門，旁邊即是成功校區，這裡有九乘九文具店、康是美藥妝店，成大會館，值得一提的是，九乘九絕對要去給他辦一張會員卡，工本費只要十塊錢而已，買東西時報手機號碼就能打折了。
+                    <br><br> 大學路上靠近勝利校區路口的18巷(靠近Hang Ten)及22巷(靠近GIRODANO)，裡面有一些價格稍貴但不錯的餐廳（井選、庫肯花園等），手頭寬裕時不妨去試試喔！ 再往前是與長榮路的十字路口，也就是大學路的後段，這裡有麥當勞、星巴克，是做報告、喇賽、吹涼涼很好的去處。往前走便是「四大金剛」各據一方的的自強校區和對面的航太系館，大學路就到這邊了哦！
+                    <br><br/>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="content" id="dorm">
+        <hr>
+        <h1>宿舍介紹~~~</h1>
+        <p>
+            大一基本上是以保障住宿為原則，不過到大二就要靠人品抽籤了嗚嗚，所以好好把握和同系同學住在附近的時光吧！除了光一、勝九是獨立電表電費另計之外，其他宿舍冷氣費另計。另外宿舍網路費是每學期兩百塊，已經包含在住宿費裡面，記得大家來台南前先在家註冊帳號喔，以免追不了劇、打不了game喔呵呵。<br><br>
+            還有假如有親朋好友要寄東西給你，宿舍收信地址除了敬業一舍是台南市北區小東路57號敬業一舍XX室之外，其他宿舍均為台南市東區大學路一號XX舍XX室，信件會直接寄到各宿舍的信箱，而宅配包裹會先送到服委室，郵局包裹則是會寄到成功校區大學路的分信室，如果在宿舍信箱收到分信室的通知，記得在期限內拿著學生證去領取喔！
+            <br><br>
+        </p>
+        <h2 style="text-align: left;">女生宿舍介紹</h2>
+        <div class="dorm-intro" id="girl">
+            <img id="dorm-pic" src="./image/dorm_girl.png">
+            <p><b>勝二</b>：書桌和床是分上下兩層的設計，有完整的個人空間，即使桌面擺上電腦主機和螢幕，放書本的空間仍有餘。書桌前面還有一個迷你公布欄，蠻實用的。但浴室和飲水機在大樓的一側，對另一側的居民來說不甚方便。</p>
+            <p><b>勝三</b>：空間是女宿中最小的，浴室和飲水機在大樓的一側，對另一側的居民較不便，但裡頭的設備還是一應具全，而且衣櫥是其他女宿的兩倍大，此外勝三的室外以及頂樓有較大的曬衣場，可以讓衣服充份曬到陽光，不會與他人的衣服擠在一起。</p>
+            <p><b>勝八</b>：每間寢室都有獨立的衛浴設備，上廁所、洗澡都很方便，不用跑到房間外面，但打掃就要靠自己和室友分工了。房間內的公共空間可以說是最大的，想躺在地上睡覺什麼的也是可以，但相對的私人空間也較少了，最讚的是有室內小冰箱可以拿來冰食物喔。</p>
+            <p><b>勝九</b>：有最大的私人空間與床一樣大的大書桌，桌上就算擺上電腦主機和螢幕，還有一大半的空間可以讓你念書，並有一大堆書櫃在桌子周圍，想放什麼拿什麼都很方便。每個人的衣櫃都有一面全身鏡，房內並配置小冰箱，每學期每個人還有優惠電度兩百度。</p>
+        </div>
+        <br>
+        <h2 style="text-align: left;">男生宿舍介紹</h2>
+        <div class="dorm-intro" id="boy">
+            <img src="./image/dorm_boy.png">
+            <p><b>勝一</b>： 價格最便宜，可是也最小，<del>有傳說中的妹子大道</del> (不過能不能脫魯應該是看個人造化)</p>
+            <p><b>光一</b>：位在光復操場旁，運動很方便，旁邊就是台南火車站。離育樂街近，生活機能佳。價格第二便宜，裡面有點陽春。地下一樓有電視機和桌球桌。</p>
+            <p><b>光二</b>：在光一旁邊。小編一年級就是住這裡，真心覺得不錯，但是之前有整修過所以價格比較高。內部空間比光一和勝一大，也比所有宿舍新。一樓有電視機，地下一樓中午會賣便當。</p>
+            <p><b>敬一</b>：夭壽大，適合系館是自強或成杏校區的同學。對面有自強籃球場，可能因為比較大所以也比較貴，但是一樓以上的空間小編覺得有點陽春(大概跟光一差不多)。一樓有撞球間和桌球桌，另外地下一樓有停車場而且不用額外申請停車證喔!</p>
+
+        </div>
+    </div>
+    <div class="content" id="course">
+        <hr>
+        <h1>問君能有幾多愁，恰似忘記選課目屎流</h1>
+        <h2 style="text-align: left;">通識相關知識</h1>
+        <div id="general-course-button" style="text-align: left;">
+            <button>基礎國文</button>
+            <button>外國語言</button>
+            <button>領域通識</button>
+            <button>融合通識</button>
+            <button>我前面的都知道喔</button>
+        </div>
+        <h2 style="text-align: left;"> 相關名詞解釋</h1>
+            <div id="noun-explain-button" style="text-align: left;">
+                <button>通識</button>
+                <button>補改選(棄選)</button>
+                <button>退選</button>
+                <button>二一</button>
+                <button>搶課</button>
+                <button>加簽</button>
+            </div>
+            <div id="english-course">
+                <h2>英文怎麼有分級，我該選哪個來修?</h2>
+                <p>
+                    學校在9/8.9.11(五、六、一)會舉辦分級測驗考試，8/18~8/31 是報名日期!(暫定)。<br>英文的模組會看考試成績來分(或是可以考到免修)。<br>如果已經有相關的檢定證明，也可以用來當成模組的分級，或是抵免2至4學分(要上網申請喔!)。<br> 相關參考:
+                    <a href="http://english.ncku.edu.tw/eagle/sites/default/files/CEFR與成功大學英語模組課程對照表106.05.17.pdf" style="font-size: 110%;">(1) CEFR與模組對照表</a>
+                    <a href="http://english.ncku.edu.tw/eagle/?q=node/626" style="font-size: 110%;">(2) 成鷹計畫-必修英文</a>
+                    <a href="http://eagle.english.ncku.edu.tw/eagleclassfiy/index.php?auth" style="font-size: 110%;">(3) 英文能力分級系統</a>
+                    <a href="http://flc.ncku.edu.tw/files/11-1395-17739.php?Lang=zh-tw" style="font-size: 110%;">(4) 英文抵免Q&A</a>
+                </p>
+            </div>
+            <div id="choose-course">
+                <h2>該選課了吧!</h2>
+                <p>
+                    不想自己慢慢摸索可以搭配紙本來看喔ㄏㄏ，這裡附上連結而已<br> (1) <a href="https://i.ncku.edu.tw/">成功入口</a><br> (2) <a href="http://course.ncku.edu.tw/course/">選課系統</a><br> (3) <a href="https://www.facebook.com/groups/637099219647956/">成大選課 懂ㄘ懂ㄘ</a><br> (4)
+                    <a href="http://course-query.acad.ncku.edu.tw/qry/index.php">課程查詢系統</a><br> (5) <a href="http://nckuhub.com">課程心得平台</a><br>
+                </p>
+            </div>
+            <div class="content" id="course-time">
+                <h2>選課時間(新生)</h2>
+                <p>建議記在行事曆上喔!</p>
+                <div class="wrapper">
+                    <div class="course-time-text" style="background-color: green;">
+                        <p>
+                            第一階段(不用搶):<br><br> 時間: 8/24 9:00 ~ 8/29 17:00<br><br> 課程全部內定，可以抽通識、國文、軍訓
+                            <br><br> 注意事項:
+                            <br> 1.一年級經濟、心理、交管、工資、企管等 5 系微 積分不內定，要自己選課。<br> 2. I5 014(課程代碼) 限醫學院大一新生選修，也要自己選課。<br> 3.教育學程 8/24 開始選課。<br> 4.如果看到餘額是0的話也沒關係，選下去就對了。
+                        </p>
+                    </div>
+                    <div class="course-time-text" style="background-color: powderblue;">
+                        <p>
+                            第二階段(不用搶)<br><br> 非外文系:
+                            <br> 時間: 9/14 13:00 ~ 9/16 13:00<br> 選英文囉!記得按照模組來選課喔!
+                            <br><br> 注意事項:
+                            <br> 1. 上下學期的英文課程名稱不能相同。<br>
+                        </p>
+                        <hr>
+                        <p>
+                            外文系 or 特殊狀況:<br> 時間: 9/18 ~ 9/22<br><br> 外文系可以加選模組三課程
+                            <br><br> 注意事項:
+                            <br> 1. 完全沒抽中通識 ->這階段可以選<br> 2. 加簽A1英文<br>
+                        </p>
+                    </div>
+                    <div class="course-time-text" style="background-color: gray;">
+                        <p>
+                            第三階段(通識以外的課可以搶喔!)<br><br> 時間: 9/25 9:00 ~ 9/28 17:00<br><br> A9通識以外的課可以直接棄補選
+                            <br><br> 通識可以直接棄選，補選的話要抽籤(現在看到額滿也可以選，可能有人退)
+                            <br><br> 注意事項:
+                            <br>
+                            <b>1.棄選可以退學分費，退選不行喔!!!</b><br> 2.若想修外系的課但人數已滿，可至各系領取加簽單，經該科授課教授簽名同意後，至各學系選課承辦人登陸選課（9/30 ~ 10/3）。<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+
+</html>

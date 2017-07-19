@@ -1,0 +1,147 @@
+body {
+    background-image: url("./image/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+#float-up {
+    position: fixed;
+    background-color: green;
+    z-index: 100;
+    padding: 2% 4%;
+    text-align: center;
+    width: 60%;
+    margin-top: 3%;
+    margin-left: 15%;
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    border-radius: 25px;
+}
+
+.float-btn {
+    position: fixed;
+    right: 0.5%;
+    font-size: 18px;
+    margin: auto;
+}
+
+#show-work-area {
+    position: fixed;
+    z-index: 101;
+    background-color: red;
+    border-radius: 25px;
+    text-align: center;
+    right: 12%;
+    top: 15%;
+    padding: 30px;
+    visibility: hidden;
+}
+
+.content {
+    position: relative;
+    display: table;
+    min-height: 100%;
+    margin: 3% 10%;
+}
+
+.wrapper {
+    position: relative;
+    display: table;
+}
+
+.course-time-text {
+    display: table-cell;
+    width: 29%;
+    min-height: 80%;
+    padding: 2%;
+}
+
+a[href] {
+    text-decoration: none;
+    color: blue;
+}
+
+a[href]:hover {
+    text-decoration: underline;
+}
+
+.button {
+    background-color: red;
+}
+
+h1,h2 {
+    position: relative;
+    text-align: center;
+    z-index: inherit;
+}
+
+.title {
+    font-size: 50px;
+    text-align: center;
+}
+
+.navbar {
+    text-align: center;
+}
+
+button {
+    font-size: 25px;
+    margin: none;
+    padding: 4px 10px;
+    margin: 5px 20px;
+    border: 2px solid green;
+    background-color: transparent;
+}
+
+button:hover {
+    background-color: green;
+}
+
+button:focus {
+    outline: none;
+}
+
+iframe {
+    padding: inherit;
+    border: none;
+    width: 80%;
+    height: 80%;
+}
+
+p {
+    font-size: 17px;
+    font-family: Meiryo, "微軟正黑體", "Microsoft JhengHei";
+}
+.dorm-pic{
+    max-height: 50%;
+    max-width: 100%;
+    margin-right: 30px; 
+    margin-bottom: 30px;
+}
+#time{
+    position: absolute;
+    bottom: 0%;
+    right: 10%;
+}
+#map-space{
+    float: left;
+    height: 100%;
+    width: 40%;
+    text-align: center;
+}
+#content-space{
+    float: left;
+    height: 100%;
+    width: 60%;
+}
+#map{    
+    max-height: 100%;
+    max-width: 100%;
+}
+.mapBtn{
+    text-align: center;
+    margin-top: 5%;
+}
