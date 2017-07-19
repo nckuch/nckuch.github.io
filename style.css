@@ -44,6 +44,7 @@ body {
     position: relative;
     display: table;
     min-height: 100%;
+    min-width: 80%;
     margin: 3% 10%;
 }
 
@@ -144,4 +145,22 @@ p {
 .mapBtn{
     text-align: center;
     margin-top: 5%;
+}
+.activity-button{
+    display: table-cell;
+    background-color: red;
+    width: 15%;
+    height: 500px;
+}
+#activity-main{
+    display: table-cell;
+    background-color: green;
+    width: 70%;
+    height: 500px;
+    text-align:center;
+    vertical-align: middle;
+}
+#activity-pic{
+    max-height: 100%;
+    max-width: 100%;
 }

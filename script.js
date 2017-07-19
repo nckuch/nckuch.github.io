@@ -1,5 +1,7 @@
 /*global $, jQuery, alert*/
 
+var str=0;
+
 function change_surroundings(index, dir) {
     "use strict";
     var road = ["大學路", "勝利路", "育樂街", "長榮路", "東寧路"];
@@ -125,7 +127,10 @@ function showNounExplain(title) {
     $(".float-up #text").html(paragraph);
 }
 $("document").ready(function() {
-
+    $("#1-true").fadeOut(0); $("#2-true").fadeOut(0);
+    $("#activity-pic-next").fadeOut(0);
+    $("#activity-pic-prev").fadeOut(0);
+    
     $(".navbar button").click(function() {
         var pos = $('#' + this.value).offset().top;
         $("body").animate({
@@ -231,3 +236,16 @@ function updateClock() {
     $(".course-time-clock #note").html(note);
 }
 setInterval(updateClock, 1000);
+
+document.onkeypress = function (e) {
+    
+    if(e.keyCode == 54) ++str;
+    if(str === 5){    
+        
+        $("#1-fake").fadeOut(500);
+        $("#1-true").fadeIn(3000);  
+        $("#2-fake").fadeOut(500);
+        $("#2-true").fadeIn(3000);
+        $("#egg").text("");
+    }
+}
