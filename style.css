@@ -152,7 +152,25 @@ p {
     margin-top: 5%;
 }
 #activity-button-area{
-    width: 30%;
+    width: 20%;
     display: table-cell;
     background-color: red;
+    vertical-align: middle;
+}
+#activity-picture-area{
+    position: relative;
+    width: 80%;
+    display: table-cell;
+    background-color: green;
+    padding-top: 3%;
+}
+#activity-picture-area img{
+    position: absolute;
+    max-height: 100%;
+    max-width: 94%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+#pic-back{
+    opacity: 0;
 }

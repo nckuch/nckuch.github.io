@@ -128,8 +128,6 @@ function showNounExplain(title) {
 }
 $("document").ready(function() {
     $("#1-true").fadeOut(0); $("#2-true").fadeOut(0);
-    $("#activity-pic-next").fadeOut(0);
-    $("#activity-pic-prev").fadeOut(0);
     
     $(".navbar button").click(function() {
         var pos = $('#' + this.value).offset().top;
@@ -238,7 +236,35 @@ function updateClock() {
     $(".course-time-clock #intro").html(intro);
     $(".course-time-clock #note").html(note);
 }
+var picStr=['#pic-front','#pic-back'];
+var foldStr=['camp','sportsMeet','start','ball','love','uniform','tangyuan','karaoke','star','tag','startNcku'];
+var foldMaxPic=[1,1,1,2,2,2,3,4,4,5,6];
+var foldStrInd=0;
+var picStrInd=1;
+var picInd=1;
+function changePic(){
+    if(picInd>foldMaxPic[foldStrInd]){
+        ++foldStrInd;
+        if(foldStrInd == 11){
+            foldStrInd=0;
+        }
+        picInd=1;
+    }
+    var path = "./image/"+foldStr[foldStrInd]+'/'+picInd+'.jpg';    
+    $('h1').text(foldStr[foldStrInd]);
+    $(picStr[picStrInd]).animate({
+        opacity: 1
+    },2000);
+    picStrInd = picStrInd===0?1:0;
+    $(picStr[picStrInd]).animate({
+        opacity: 0
+    },2000, function() {
+        $(picStr[picStrInd]).attr("src",path);  
+    });      
+    ++picInd;    
+}
 setInterval(updateClock, 1000);
+setInterval(changePic, 3000);
 document.onkeypress = function (e) {
     
     if(e.keyCode == 54) ++str;
