@@ -54,7 +54,6 @@ body {
 }
 
 .wrapper {
-    position: relative;
     display: table;
 }
 
@@ -82,6 +81,12 @@ h1,h2 {
     position: relative;
     text-align: center;
     z-index: inherit;
+}
+h1{
+    font-size: 45px;
+}
+h2{
+    font-size: 35px;
 }
 
 .title {
@@ -118,7 +123,7 @@ iframe {
 }
 
 p {
-    font-size: 17px;
+    font-size: 20px;
     font-family: Meiryo, "微軟正黑體", "Microsoft JhengHei";
 }
 .dorm-pic{
@@ -152,24 +157,24 @@ p {
     margin-top: 5%;
 }
 #activity-button-area{
-    width: 20%;
-    display: table-cell;
-    //background-color: red;
-    vertical-align: middle;
+    text-align: center;
 }
 #activity-picture-area{
-    position: relative;
-    width: 80%;
     display: table-cell;
-    //background-color: green;
-    padding-top: 3%;
+    width: 40%;
+}
+#activity-word-area{
+    display: table-cell;
+    width: 60%;
+}
+#activity-word{
+    padding: 5% 5%;
 }
 #activity-picture-area img{
-    position: absolute;
-    max-height: 100%;
-    max-width: 94%;
-    padding-left: 3%;
-    padding-right: 3%;
+    position: absolute; //close when debugging
+    max-height: 40%;
+    max-width: 40%;
+    padding-top: 10%;
 }
 #pic-back{
     opacity: 0;

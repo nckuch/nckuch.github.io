@@ -3,6 +3,7 @@
 var str=0;
 var timer=setInterval(function(){},3000);
 var picStr=['#pic-front','#pic-back'];
+var chineseName=['彰迎','成迎','彰友運動會','彰友傳情','湯圓會','流星團','會卡K','彰友大逃殺','聯合舞會','寒營'];
 var picStrInd=1;
 var picInd=1;
 
@@ -130,6 +131,51 @@ function showNounExplain(title) {
     $(".float-up #title").html(title);
     $(".float-up #text").html(paragraph);
 }
+
+function changeActivityWord(folder){
+    var paragraph="";
+    if(folder == "start"){
+        paragraph = "「暑假好長好無聊喔，我可以做什麼?」、「聽說大學生都要自己選課，那是什麼?」、「我是玩咖，成大附近有什麼好玩的嗎?」、「好像有很多社團，看介紹好像也不太知道在幹嘛的欸?」如果你有上面這些疑問的話，來彰迎就對了！ 在這短短的一天裡面，除了可以看到學長姐們用心準備的表演、和夥伴一起闖關玩遊戲外，還能先一步的聽學長姊介紹成大的生活，如果有什麼問題，也可以像學長姐提問喔！現在馬上報名，讓我們一起創造最美麗的開始吧！<br><br>\
+        營期資訊: 	*有問題可以向家爸媽詢問喔！*<br>\
+	    時間: 8/25 9:00~19:00<br>\
+	   地點: 員林國小<br>\
+        報到時間:8:40~9:00	報到地點:員林國小門口<br>\
+	   費用: 100餐費（當天繳交就好了喔！）";
+    }
+    else if(folder == "startNcku"){
+        paragraph = "什麼??? 你說成大周圍太小了不夠你逛??? 哼！想要走透台南根本不是問題，只要報名成迎就對啦，讓我們一起穿著帥氣的會服走透台南！ 在過程中，相信你會跟夥伴們越來越熟，最後更是會對彰友有溫暖的歸屬感呢！ 在台南，彰友就是你的第二個家！ <br><br>\
+        *成迎相關資訊之後會在彰友110版和各家版公布！*";
+
+        
+    }
+    else if(folder == "sportsMeet"){
+        paragraph = "擔心上了大學課業壓力太大嗎? 那就來參加彰有運動會吧！ 一天的時間讓你大展球技，充分體現何謂「不怕遇到神一般的敵人，只怕遇到豬一般的隊友」。還等什麼呢?讓我們在期中崩潰後，大力的發洩一下吧！";
+    }
+    else if(folder == "love"){
+        paragraph = "古云:「大學脫魯古來稀，你不丟球要誰接」<br>\
+        怎麼常聽到誰誰誰在傳情? 其實傳情簡單說就是假他人之手表達心意啦！ 傳的對象可以是你偷偷暗戀的人，也可以是很照顧你的朋友之類的，向主辦單位填寫資料，他就會幫你送到喔！ 傳情在大學四處很常見，彰友會也不例外喔！ 大家快來參加吧！";
+    }
+    else if(folder == "tangyuan"){
+        paragraph = "好冷好冷的冬天最適合大家相聚吃喝、閒話家常了！ 在吃湯圓的同時，我們還會準備各式各樣的活動喔。讓大家在暖胃同時也暖了自己的心，充滿笑聲不亦樂乎！ 等什麼呢！ 讓我們在歲末年終之際，向彼此說些祝福的話語吧！";
+    }
+    else if(folder == "star"){
+        paragraph = "上大學後免不了夜衝一波啦！ 但相信你一定沒有和熟悉的人一起欣賞過流星雨吧，這機會可是很難得的啊！ 和夥伴們相依偎在黑夜的星空下許願、細語，感情也會變得更好喔！";
+    }
+    else if(folder == "karaoke"){
+        paragraph = "待補";
+    }
+    else if(folder == "tag"){
+        paragraph = "待補";
+    }
+    else if(folder == "ball"){
+        paragraph = "待補";
+    }
+    else if(folder == "camp"){
+        paragraph = "絕對、絕對、絕對不能錯過的彰友會大型活動！你是否還記得自己在高中對未來的迷惘？還是對舉辦營隊有著好奇與憧憬呢？寒營是辦給全國高中生的營隊，主要是向高中生們介紹成大的各科系，當然其中的有趣活動也是不會少的哦！不管你是想要學習不一樣的事物，還是想要凝聚與夥伴的感情，寒營都是所有學長姐們一致推薦的活動啊！就讓我們像照片裡冉冉升空的氣球一樣，一起飛向未知卻明亮的藍天吧！";
+    }
+    $("#activity-word").html(paragraph);
+}
+
 $("document").ready(function() {
     $("#1-true").fadeOut(0); $("#2-true").fadeOut(0);
     
@@ -139,13 +185,24 @@ $("document").ready(function() {
             scrollTop: pos
         }, 900);
     });
-    $("#activity-button-area button").click(function() {
+    $("#activity-button-area button").click(function(e) {
         clearInterval(timer);
         var fold=this.value.split(' ')[0];
         var num=this.value.split(' ')[1];
-        picInd=1;
-  
-        timer = setInterval(function(){changePic(fold,num)},3000);
+        var name=chineseName[this.value.split(' ')[2]];
+        $("#activity-word-area h2").text(name);
+        picInd=3;
+        changeActivityWord(fold);
+        $(picStr[picStrInd]).attr("src","./image/"+fold+"/1.jpg");
+        $(picStr[picStrInd]).css("opacity",0);
+        $(picStr[picStrInd==0?1:0]).attr("src","");
+        $(picStr[picStrInd==0?1:0]).css("opacity",1);
+        changePic(fold,num);
+        if(num>=2){
+            $(picStr[picStrInd==0?1:0]).attr("src","./image/"+fold+"/2.jpg");
+            timer = setInterval(function(){changePic(fold,num)},3000);
+        }
+        
     });
     $("#activity-button").click(function() {
        $("#float-activity").css("visibility", "visible");
@@ -250,11 +307,11 @@ function updateClock() {
 }
 function changePic(folder,maxInd){
     if(picInd>maxInd) picInd=1;
+    console.log('next = '+picInd);
     var path = "./image/"+folder+'/'+picInd+'.jpg';
     $(picStr[picStrInd]).animate({
         opacity: 1
     },2000);
-    $("#activity-picture-area h1").text(folder);
     picStrInd = picStrInd===0?1:0;
     $(picStr[picStrInd]).animate({
         opacity: 0
@@ -268,12 +325,15 @@ setInterval(updateClock, 1000);
 document.onkeypress = function (e) {
     
     if(e.keyCode == 54) ++str;
-    if(str === 5){    
-        
+    if(str === 5){ 
+        $("#egg").text("騙你的ㄏㄏ");
+    }
+    else if(str === 10){
         $("#1-fake").fadeOut(500);
         $("#1-true").fadeIn(3000);  
         $("#2-fake").fadeOut(500);
         $("#2-true").fadeIn(3000);
-        $("#egg").text("");
+        $("#egg").text("這個態度66666!");
+        
     }
 }
