@@ -154,14 +154,14 @@ p {
 #activity-button-area{
     width: 20%;
     display: table-cell;
-    background-color: red;
+    //background-color: red;
     vertical-align: middle;
 }
 #activity-picture-area{
     position: relative;
     width: 80%;
     display: table-cell;
-    background-color: green;
+    //background-color: green;
     padding-top: 3%;
 }
 #activity-picture-area img{

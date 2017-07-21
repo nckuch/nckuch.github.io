@@ -1,6 +1,10 @@
 /*global $, jQuery, alert*/
 
 var str=0;
+var timer=setInterval(function(){},3000);
+var picStr=['#pic-front','#pic-back'];
+var picStrInd=1;
+var picInd=1;
 
 function change_surroundings(index, dir) {
     "use strict";
@@ -135,6 +139,14 @@ $("document").ready(function() {
             scrollTop: pos
         }, 900);
     });
+    $("#activity-button-area button").click(function() {
+        clearInterval(timer);
+        var fold=this.value.split(' ')[0];
+        var num=this.value.split(' ')[1];
+        picInd=1;
+  
+        timer = setInterval(function(){changePic(fold,num)},3000);
+    });
     $("#activity-button").click(function() {
        $("#float-activity").css("visibility", "visible");
     });
@@ -236,25 +248,13 @@ function updateClock() {
     $(".course-time-clock #intro").html(intro);
     $(".course-time-clock #note").html(note);
 }
-var picStr=['#pic-front','#pic-back'];
-var foldStr=['camp','sportsMeet','start','ball','love','uniform','tangyuan','karaoke','star','tag','startNcku'];
-var foldMaxPic=[1,1,1,2,2,2,3,4,4,5,6];
-var foldStrInd=0;
-var picStrInd=1;
-var picInd=1;
-function changePic(){
-    if(picInd>foldMaxPic[foldStrInd]){
-        ++foldStrInd;
-        if(foldStrInd == 11){
-            foldStrInd=0;
-        }
-        picInd=1;
-    }
-    var path = "./image/"+foldStr[foldStrInd]+'/'+picInd+'.jpg';    
-    $('h1').text(foldStr[foldStrInd]);
+function changePic(folder,maxInd){
+    if(picInd>maxInd) picInd=1;
+    var path = "./image/"+folder+'/'+picInd+'.jpg';
     $(picStr[picStrInd]).animate({
         opacity: 1
     },2000);
+    $("#activity-picture-area h1").text(folder);
     picStrInd = picStrInd===0?1:0;
     $(picStr[picStrInd]).animate({
         opacity: 0
@@ -264,7 +264,7 @@ function changePic(){
     ++picInd;    
 }
 setInterval(updateClock, 1000);
-setInterval(changePic, 3000);
+
 document.onkeypress = function (e) {
     
     if(e.keyCode == 54) ++str;
