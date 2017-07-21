@@ -45,17 +45,17 @@ function change_surroundings(index, dir) {
 
 function toggleFloatUp(status) {
     if (status == true) {
-        if ($("#float-up").css("visibility") == "visible") {
-            $("#float-up").css({ visibility: "visible", opacity: "0" })
+        if ($("#float-word").css("visibility") == "visible") {
+            $("#float-word").css({ visibility: "visible", opacity: "0" })
         }
-        $("#float-up").css("visibility", "visible");
-        $("#float-up").animate({
+        $("#float-word").css("visibility", "visible");
+        $("#float-word").animate({
             opacity: "1"
         }, 700);
     } else {
-        $("#float-up").animate({
+        $("#float-word").animate({
             opacity: "0"
-        }, 700, function() { $("#float-up").css("visibility", "hidden") });
+        }, 700, function() { $("#float-word").css("visibility", "hidden") });
     }
 }
 
@@ -136,6 +136,9 @@ $("document").ready(function() {
         $("body").animate({
             scrollTop: pos
         }, 900);
+    });
+    $("#activity-button").click(function() {
+       $("#float-activity").css("visibility", "visible");
     });
 
     $("#return").click(function() {
@@ -236,7 +239,6 @@ function updateClock() {
     $(".course-time-clock #note").html(note);
 }
 setInterval(updateClock, 1000);
-
 document.onkeypress = function (e) {
     
     if(e.keyCode == 54) ++str;

@@ -3,10 +3,9 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    position: relative;
 }
 
-#float-up {
+#float-word {
     position: fixed;
     background-color: green;
     z-index: 100;
@@ -19,6 +18,12 @@ body {
     visibility: hidden;
     display: block;
     border-radius: 25px;
+}
+#float-activity{
+    position: fixed;
+    background-color: red;
+    z-index: 100;
+    visibility: hidden;
 }
 
 .float-btn {
@@ -146,21 +151,8 @@ p {
     text-align: center;
     margin-top: 5%;
 }
-.activity-button{
+#activity-button-area{
+    width: 30%;
     display: table-cell;
     background-color: red;
-    width: 15%;
-    height: 500px;
-}
-#activity-main{
-    display: table-cell;
-    background-color: green;
-    width: 70%;
-    height: 500px;
-    text-align:center;
-    vertical-align: middle;
-}
-#activity-pic{
-    max-height: 100%;
-    max-width: 100%;
 }
