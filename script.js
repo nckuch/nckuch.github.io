@@ -3,14 +3,14 @@
 var str=0;
 var timer=setInterval(function(){},3000);
 var picStr=['#pic-front','#pic-back'];
+var road=['大學路','勝利路','育樂街','長榮路','東寧路','小東路'];
 var chineseName=['彰迎','成迎','彰友運動會','彰友傳情','湯圓會','流星團','會卡K','彰友大逃殺','聯合舞會','寒營'];
 var picStrInd=1;
 var picInd=1;
 
-function change_surroundings(index, dir) {
+function change_surroundings(index) {
     "use strict";
-    var road = ["大學路", "勝利路", "育樂街", "長榮路", "東寧路"];
-    var paragraph, len = parseInt(dir, 10) * 350;
+    var paragraph;
     switch (index) {
         case 0:
             paragraph = "<h1>大學路</h1><p>後火車站一出來看到的第一條路就是大學路了! 一路走到底，左手邊分別是光復、成功、自強校區，而在成功校區對面的是勝利校區。這條路上的店家多不勝數(很多東西都可以在這附近買啦~)。在光復校區門口(俗稱光口)附近的這一段路有很多影印店、飲料店，光口對面更是有一條育樂街，想不到要吃什麼就到這裡吧~有很多東西可以吃的啊!<br><br>再繼續往前走左手邊是成功校區，右手邊是勝利校區。這裡有九乘九文具店，康是美，成大會館。在成大會館後方(勝利路接大學路附近)也有很多餐廳，不過價格就偏高一些了。去九乘九買東西一定要辦個會員卡的啦! 只要十塊而已買東西就可以打折囉!<br><br>再往前走有麥當勞(24hr)和肯德基(非24hr)。如果要討論報告，麥當勞也是個不錯的選擇喔。在肯德基的附近有兩條巷子(18巷、22巷)，裡面也有很多餐廳，價位也偏高，如果手頭充裕的話也是不錯的選擇。(台南有很多巷子，裡面都有很多驚喜!)</p>";
@@ -38,14 +38,15 @@ function change_surroundings(index, dir) {
     $("#content-intro").fadeOut(500, function() {
         $("#content-intro").html(paragraph).fadeIn(500);
     });
-    $("#map").fadeOut(500, function() {
-        $("#map").attr("src", "./image/nckuMap/nckuMap" + index + ".jpg").fadeIn(500);
-    });
+    $("#map-space img").animate({
+        opacity: 0
+    },500);
+    $("#map"+index).animate({
+        opacity: 1
+    },500);
     $("#left_btn").html("上一個:" + road[index - 1 < 0 ? 4 : index - 1]);
     $("#right_btn").html("下一個:" + road[index + 1 > 4 ? 0 : index + 1]);
 
-
-    $("body").scrollTop($("#nckuMapImg").offset().top);
 }
 
 function toggleFloatUp(status) {
@@ -177,6 +178,7 @@ function changeActivityWord(folder){
 }
 
 $("document").ready(function() {
+    change_surroundings(0);
     $("#1-true").fadeOut(0); $("#2-true").fadeOut(0);
     
     $(".navbar button").click(function() {
@@ -230,7 +232,7 @@ $("document").ready(function() {
 
         $("#content-intro").attr("value", current_val);
 
-        change_surroundings(current_val, this.value);
+        change_surroundings(current_val);
     });
 
     $("#general-course-button button").click(function(e) {

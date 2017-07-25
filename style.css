@@ -47,8 +47,8 @@ body {
 
 .content {
     position: relative;
-    display: table;
     min-height: 100%;
+    //background-color: green;
     min-width: 80%;
     margin: 3% 10%;
 }
@@ -137,20 +137,28 @@ p {
     bottom: 0%;
     right: 10%;
 }
+#nckuMap{
+    min-height: 800px;
+}
 #map-space{
-    float: left;
-    height: 100%;
+    position: relative;
+    display: table-cell;
+    //background-color: red;
     width: 40%;
-    text-align: center;
 }
 #content-space{
-    float: left;
-    height: 100%;
+    position: relative;
+    display: table-cell;
+    //background-color: blue;
     width: 60%;
+    height: 100%;
 }
-#map{    
-    max-height: 100%;
+#map-space img{    
+    position: absolute;
+    opacity: 0;
+    left: 0%;
     max-width: 100%;
+    margin-top: 17%;
 }
 .mapBtn{
     text-align: center;
