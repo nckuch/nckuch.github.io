@@ -195,8 +195,10 @@ $("document").ready(function() {
         changeActivityWord(fold);
         $(picStr[picStrInd]).attr("src","./image/"+fold+"/1.jpg");
         $(picStr[picStrInd]).css("opacity",0);
+        $(picStr[picStrInd]).stop();
         $(picStr[picStrInd==0?1:0]).attr("src","");
-        $(picStr[picStrInd==0?1:0]).css("opacity",1);
+        $(picStr[picStrInd==0?1:0]).css("opacity",1);        
+        $(picStr[picStrInd==0?1:0]).stop();
         changePic(fold,num);
         if(num>=2){
             $(picStr[picStrInd==0?1:0]).attr("src","./image/"+fold+"/2.jpg");
@@ -307,7 +309,6 @@ function updateClock() {
 }
 function changePic(folder,maxInd){
     if(picInd>maxInd) picInd=1;
-    console.log('next = '+picInd);
     var path = "./image/"+folder+'/'+picInd+'.jpg';
     $(picStr[picStrInd]).animate({
         opacity: 1
