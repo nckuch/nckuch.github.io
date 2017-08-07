@@ -176,7 +176,6 @@ function changeActivityWord(folder){
 
 $("document").ready(function() {
     change_surroundings(0);
-    $("#1-true").fadeOut(0); $("#2-true").fadeOut(0);
     
     $(".navbar button").click(function() {
         var pos = $('#' + this.value).offset().top;
@@ -321,19 +320,3 @@ function changePic(folder,maxInd){
     ++picInd;    
 }
 setInterval(updateClock, 1000);
-
-document.onkeypress = function (e) {
-    
-    if(e.keyCode == 54) ++str;
-    if(str === 5){ 
-        $("#egg").text("騙你的ㄏㄏ");
-    }
-    else if(str === 10){
-        $("#1-fake").fadeOut(500);
-        $("#1-true").fadeIn(3000);  
-        $("#2-fake").fadeOut(500);
-        $("#2-true").fadeIn(3000);
-        $("#egg").text("這個態度66666！");
-        
-    }
-}
