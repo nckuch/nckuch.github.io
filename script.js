@@ -145,6 +145,7 @@ function changeActivityWord(folder){
         <a href='https://www.google.com.tw/maps/place/%E8%8C%97%E4%BA%BA%E8%8C%B6%E8%A1%8C/@23.9602513,120.5699883,18.25z/data=!4m5!3m4!1s0x34693659cc650d87:0xa801565da8cf2503!8m2!3d23.9616983!4d120.5707487'>google map支援~~</a><br>\
         因為店家有低消限制 所以請大家務必點一杯飲料阿~~~<br>\
         活動：109與110第一次的會面，主要是聊天講幹話聯繫感情，我們也會準備選課相關的資訊以及成大所必須知道的事情供你們服用，所以趕快填下你們的意見吧!!!!<br><br>\
+        表單連結: <a href='https://goo.gl/yW3bCF'>https://goo.gl/yW3bCF</a> <br>\
         有事請聯絡最帥氣的總召大大\
         總召：<a href='https://www.facebook.com/profile.php?id=100000511003282&fref=ts'>陳柏熏</a><br>\
         "
